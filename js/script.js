@@ -54,9 +54,26 @@ createApp({
         showSlide(clickedSlide) {
             this.currentSlide = clickedSlide;
         },
+        startPlay() {
+            this.play = true
+            this.intervalId = setInterval(() => {
+              this.next()
+            }, 1000)
+      
+          },
+          stopPlay() {
+            this.play = false
+            clearInterval(this.intervalId)
+          }
+      
+        },
+        mounted() {
+          
+          this.startPlay()
+
     }
 
-        
+   
 
 }).mount('#app');
 
