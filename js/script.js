@@ -58,7 +58,7 @@ createApp({
             this.play = true
             this.intervalId = setInterval(() => {
               this.next()
-            }, 1000)
+            }, 3000)
       
           },
           stopPlay() {
